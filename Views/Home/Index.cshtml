@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Quiz App</h1>
+</div>
+
+
+<div class="mt-5 mb-2 row justify-content-end">
+    <a href="@Url.Action("AddExam","Exam")" class="btn btn-success" style="width:8rem;">Add new quiz</a>
+</div>
+
+<section class="row gap-5 align-items-center justify-content-center justify-content-md-start">
+
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var justLoggedIn = '@TempData["JustLoggedIn"]';
+        if (justLoggedIn === "true") {
+            Swal.fire({
+                icon: "success",
+                title: "Login Successful",
+                text: "Welcome back!",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+    });
+</script>
+
+
+
+<style>
+
+</style>

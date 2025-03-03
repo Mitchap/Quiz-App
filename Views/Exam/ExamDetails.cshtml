@@ -1,0 +1,85 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Quiz_App.Models.Entities.Exam
+
+
+<div class="m-5">
+    <div class="col-auto mb-5">
+        <a href="@Url.Action("ListExam","Exam")" class="btn btn-outline-success"><i class="fa-solid fa-arrow-up-from-bracket fa-rotate-270"></i></a>
+    </div>
+  
+
+ <section class="text-start">
+        <h1 class="">@Model.Title</h1>
+        <p class="">Duration: @Model.Duration minute(s)</p>
+        <p>Randomize:  <span class="">@GetYesNo(@Model.Randomize)</span></p>
+
+        @* check if value is random or not *@
+        @functions {
+            public string GetYesNo(bool value)
+            {
+                return value ? "Yes" : "No";
+            }
+        }
+
+        <a asp-controller="Exam" asp-action="EditExam" asp-route-id="@Model.Id" class="btn btn-primary">Edit Details</a>
+            
+ </section>
+
+ <section class="mt-5">
+     <h4>Question</h4>
+        <a asp-controller="Question" asp-action="AddQuestion" asp-route-examId="@Model.Id" class="btn btn-primary">Add Questions</a>
+
+ </section>
+
+    <section class="row my-5 card p-2 align-items-center justify-content-center justify-content-md-start">
+          <div class="row justify-content-between">
+            <div class="col-auto">
+                <label class="form-label fw-bold" for="QuestionTitle">Question:</label>
+                <p>What does HTML stand for?</p>
+            </div>
+            <div class="col-auto">
+                <a href="#" type="button" class="btn btn-warning"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-md-8">
+                <p class="fw-bold">Choices:</p>
+                <p>•What does HTML stand for?</p>
+                <p>•What does HTML stand for?</p>
+                <p>•What does HTML stand for?</p>
+                <p>•What does HTML stand for?</p>
+
+            </div>
+
+            <div class="col-md-4">
+                <p class="fw-bold">Answer:</p>
+                <div class="d-flex flex-column gap-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="choice1" value="choice1" checked disabled>
+                        <label class="form-check-label" for="choice1">Choice 1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="choice2" value="choice2" disabled>
+                        <label class="form-check-label" for="choice2">Choice 2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="choice3" value="choice3" disabled>
+                        <label class="form-check-label" for="choice3">Choice 3</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="choice4" value="choice4" disabled>
+                        <label class="form-check-label" for="choice4">Choice 4</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+

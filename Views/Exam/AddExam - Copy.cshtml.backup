@@ -1,0 +1,182 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Quiz_App.Models.ExamViewModel.Exam
+@model Quiz_App.Models.ExamViewModel.Question
+
+
+<section class="m-5">
+
+    <h1 class="text-center mb-5">Add new Quiz</h1>
+
+
+    <form >
+            <fieldset class="row justify-content-between">
+                <div class="col-4">
+                    <div class="col mb-2 ">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                            <label class="form-label h4" for="Title">Title:</label>
+                            </div>
+                            <div class="col-auto">
+                            <input type="text" id="Title" name="Title" class="form-control" required min="1" max="240" asp-for="Title"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="col mb-2 ">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                            <label class="form-label h5" for="Duration">Duration (minutes):</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" name="Duration" class="form-control" required style="width: 75px;" asp-for="Duration"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                    <label class="form-label h5" for="Randomize">Randomize:</label>
+                        <input type="checkbox" name="Randomize" class="form-check-input" asp-for="Randomize"/>
+                    </div>
+                </div>
+            </fieldset>
+
+            @* question form starts here *@
+
+        <section id="questions-container" class="mb-5">
+            <fieldset class="container mt-5 p-4 border rounded shadow">
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <label class="form-label fw-bold" for="Question">Question:</label>
+                        <textarea name="Question" class="form-control" minlength="1" maxlength="240" rows="2" required></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="fw-bold">Choices:</p>
+                        <div class="d-flex flex-column gap-2">
+                            <input type="text" class="form-control" placeholder="Choice 1" required />
+                            <input type="text" class="form-control" placeholder="Choice 2" required />
+                            <input type="text" class="form-control" placeholder="Choice 3" required />
+                            <input type="text" class="form-control" placeholder="Choice 4" required />
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p class="fw-bold">Answer:</p>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answer" id="choice1">
+                                <label class="form-check-label" for="choice1">Choice 1</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answer" id="choice2">
+                                <label class="form-check-label" for="choice2">Choice 2</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answer" id="choice3">
+                                <label class="form-check-label" for="choice3">Choice 3</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="answer" id="choice4">
+                                <label class="form-check-label" for="choice4">Choice 4</label>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-auto">
+                            <a href="#" class="btn btn-danger" onclick="return confirm('Are you sure? This will discard all data.')">Discard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+        </section>
+
+        <button type="button" class="btn btn-primary" onclick="addQuestion()">Add Question</button>
+
+        @* submit and cancel buttons *@
+        <div class="row justify-content-end" style="margin-top: 200px;">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="btn btn-secondary" onclick="return confirm('Are you sure? This will discard all data.')">Cancel</a>
+            </div>
+        </div>
+
+    </form>
+</section>
+
+<script>
+    let questionCount = 0;
+
+    function addQuestion() {
+        questionCount++;
+        // Generate a unique ID for the question block
+        const uniqueId = `q${Date.now()}`; 
+
+        const questionHtml = `
+                <fieldset id="${uniqueId}" class="container mt-5 p-4 border rounded shadow">
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <label class="form-label fw-bold" for="Question${questionCount}">Question:</label>
+                            <textarea name="Question${questionCount}" class="form-control" minlength="1" maxlength="240" rows="2" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="fw-bold">Choices:</p>
+                            <div class="d-flex flex-column gap-2">
+                                <input type="text" class="form-control" name="Choice${questionCount}_1" placeholder="Choice 1" required />
+                                <input type="text" class="form-control" name="Choice${questionCount}_2" placeholder="Choice 2" required />
+                                <input type="text" class="form-control" name="Choice${questionCount}_3" placeholder="Choice 3" required />
+                                <input type="text" class="form-control" name="Choice${questionCount}_4" placeholder="Choice 4" required />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <p class="fw-bold">Answer:</p>
+                            <div class="d-flex flex-column gap-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Answer${questionCount}" id="choice${questionCount}_1">
+                                    <label class="form-check-label" for="choice${questionCount}_1">Choice 1</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Answer${questionCount}" id="choice${questionCount}_2">
+                                    <label class="form-check-label" for="choice${questionCount}_2">Choice 2</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Answer${questionCount}" id="choice${questionCount}_3">
+                                    <label class="form-check-label" for="choice${questionCount}_3">Choice 3</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Answer${questionCount}" id="choice${questionCount}_4">
+                                    <label class="form-check-label" for="choice${questionCount}_4">Choice 4</label>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end mt-3">
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-danger" onclick="removeQuestion('${uniqueId}')">Discard</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            `;
+
+        document.getElementById("questions-container").insertAdjacentHTML('beforeend', questionHtml);
+    }
+
+    function removeQuestion(id) {
+        document.getElementById(id).remove();
+    }
+</script>

@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Quiz_App.Models.ExamViewModel.Exam
+
+
+<section class="m-5">
+
+    <h1 class="text-center mb-5">Add new Exam</h1>
+
+
+    <form method="post">
+            <fieldset class="row justify-content-between">
+                <div class="col-4">
+                    <div class="col mb-2 ">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                            <label class="form-label h4" for="Title">Title:</label>
+                            </div>
+                            <div class="col-auto">
+                            <input type="text" id="Title" name="Title" class="form-control" required asp-for="Title"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="col mb-2 ">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                            <label class="form-label h5" for="Duration">Duration (minutes):</label>
+                            </div>
+                            <div class="col-auto">
+                            <input type="number" name="Duration" class="form-control" required style="width: 75px;  min=" 1" max="240" asp-for="Duration" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                    <label class="form-label h5" for="Randomize">Randomize:</label>
+                        <input type="checkbox" name="Randomize" class="form-check-input" asp-for="Randomize"/>
+                    </div>
+                </div>
+            </fieldset>
+
+
+        @* submit and cancel buttons *@
+        <div class="row justify-content-end" style="margin-top: 200px;">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+            <div class="col-auto">
+                <a href="@Url.Action("ListExam","Exam")" class="btn btn-secondary" onclick="return confirm('Are you sure? This will discard all data.')">Cancel</a>
+            </div>
+        </div>
+
+    </form>
+</section>
+

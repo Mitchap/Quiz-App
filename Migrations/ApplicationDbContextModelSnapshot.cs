@@ -201,6 +201,10 @@ namespace Quiz_App.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ProfilePictureUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -268,7 +272,6 @@ namespace Quiz_App.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CorrectAnswer")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("ExamId")

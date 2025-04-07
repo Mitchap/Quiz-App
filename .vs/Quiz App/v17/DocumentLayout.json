@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|c:\\users\\lenov\\source\\repos\\quiz-app\\wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|solutionrelative:wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|c:\\users\\lenov\\source\\repos\\quiz-app\\wwwroot\\profile_images\\images.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|solutionrelative:wwwroot\\profile_images\\images.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|c:\\users\\lenov\\source\\repos\\quiz-app\\wwwroot\\profile_images\\efe696e4d568cd1960c52804cb17b46b.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|solutionrelative:wwwroot\\profile_images\\efe696e4d568cd1960c52804cb17b46b.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|c:\\users\\lenov\\source\\repos\\quiz-app\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|c:\\users\\lenov\\source\\repos\\quiz-app\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|c:\\users\\lenov\\source\\repos\\quiz-app\\areas\\identity\\data\\quiz_appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|solutionrelative:areas\\identity\\data\\quiz_appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|c:\\users\\lenov\\source\\repos\\quiz-app\\migrations\\20250407020255_makeprofilepicturenullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|solutionrelative:migrations\\20250407020255_makeprofilepicturenullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|c:\\users\\lenov\\source\\repos\\quiz-app\\migrations\\20250403183552_addprofilepicturetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{288AF407-6D22-4A5A-A56B-38DDDC93641F}|Quiz App.csproj|solutionrelative:migrations\\20250403183552_addprofilepicturetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,19 +47,99 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "moonlit-makima-by-the-pool-1231475401499475988.jpeg",
+              "DocumentMoniker": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg",
+              "RelativeDocumentMoniker": "wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg",
+              "ToolTip": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg",
+              "RelativeToolTip": "wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-07T11:53:41.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "images.jpg -  [English (United States)] - Bitmap [237x213, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\images.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\profile_images\\images.jpg",
+              "ToolTip": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\images.jpg -  [English (United States)] - Bitmap [237x213, 24 bit, JPG]",
+              "RelativeToolTip": "wwwroot\\profile_images\\images.jpg -  [English (United States)] - Bitmap [237x213, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-07T11:53:35.914Z",
+              "EditorCaption": " -  [English (United States)] - Bitmap [237x213, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "efe696e4d568cd1960c52804cb17b46b.jpg -  [English (United States)] - Bitmap [735x723, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\efe696e4d568cd1960c52804cb17b46b.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\profile_images\\efe696e4d568cd1960c52804cb17b46b.jpg",
+              "ToolTip": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\efe696e4d568cd1960c52804cb17b46b.jpg -  [English (United States)] - Bitmap [735x723, 24 bit, JPG]",
+              "RelativeToolTip": "wwwroot\\profile_images\\efe696e4d568cd1960c52804cb17b46b.jpg -  [English (United States)] - Bitmap [735x723, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-07T11:53:34.794Z",
+              "EditorCaption": " -  [English (United States)] - Bitmap [735x723, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T03:20:03.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Quiz_AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Areas\\Identity\\Data\\Quiz_AppUser.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Data\\Quiz_AppUser.cs",
+              "ToolTip": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Areas\\Identity\\Data\\Quiz_AppUser.cs",
+              "RelativeToolTip": "Areas\\Identity\\Data\\Quiz_AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T02:41:04.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250407020255_MakeProfilePictureNullable.cs",
+              "DocumentMoniker": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Migrations\\20250407020255_MakeProfilePictureNullable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250407020255_MakeProfilePictureNullable.cs",
+              "ToolTip": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Migrations\\20250407020255_MakeProfilePictureNullable.cs",
+              "RelativeToolTip": "Migrations\\20250407020255_MakeProfilePictureNullable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T02:02:56.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250403183552_AddProfilePictureToUser.cs",
+              "DocumentMoniker": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Migrations\\20250403183552_AddProfilePictureToUser.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250403183552_AddProfilePictureToUser.cs",
+              "ToolTip": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Migrations\\20250403183552_AddProfilePictureToUser.cs",
+              "RelativeToolTip": "Migrations\\20250403183552_AddProfilePictureToUser.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T01:57:34.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
               "ToolTip": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\.gitignore",
               "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-04-04T08:17:43.734Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

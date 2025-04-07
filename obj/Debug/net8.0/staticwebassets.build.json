@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uJnwzz2MhNAGBQlSN7Y2tZbrSU/q/4Vn4tGjuekpBBs=",
+  "Hash": "58ZijqQXJxHJpFtL4QYbgkIm1HKkiBEVUY7TE0F8FgY=",
   "Source": "Quiz App",
   "BasePath": "_content/Quiz App",
   "Mode": "Default",
@@ -2577,6 +2577,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\images.jpg",
+      "SourceId": "Quiz App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\",
+      "BasePath": "_content/Quiz App",
+      "RelativePath": "profile_images/images#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oohwpm0y1x",
+      "Integrity": "eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_images\\images.jpg"
     },
     {
       "Identity": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg",
@@ -9742,6 +9763,88 @@
       ]
     },
     {
+      "Route": "profile_images/images.jpg",
+      "AssetFile": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6778"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 08:36:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/images.oohwpm0y1x.jpg",
+      "AssetFile": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6778"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 08:36:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oohwpm0y1x"
+        },
+        {
+          "Name": "label",
+          "Value": "profile_images/images.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA="
+        }
+      ]
+    },
+    {
       "Route": "profile_images/moonlit-makima-by-the-pool-1231475401499475988.jpeg",
       "AssetFile": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg",
       "Selectors": [],
@@ -9846,7 +9949,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:23:06 GMT"
+          "Value": "Mon, 07 Apr 2025 02:41:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9883,7 +9986,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:23:06 GMT"
+          "Value": "Mon, 07 Apr 2025 02:41:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9928,7 +10031,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:23:06 GMT"
+          "Value": "Mon, 07 Apr 2025 02:41:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9973,7 +10076,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:23:06 GMT"
+          "Value": "Mon, 07 Apr 2025 02:41:36 GMT"
         },
         {
           "Name": "Cache-Control",

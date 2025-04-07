@@ -2249,7 +2249,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:23:06 GMT"
+          "Value": "Mon, 07 Apr 2025 02:41:36 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2294,7 +2294,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 08:23:06 GMT"
+          "Value": "Mon, 07 Apr 2025 02:41:36 GMT"
         }
       ],
       "EndpointProperties": [
@@ -7221,6 +7221,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/images.jpg",
+      "AssetFile": "profile_images/images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6778"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 08:36:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/images.oohwpm0y1x.jpg",
+      "AssetFile": "profile_images/images.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6778"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 08:36:43 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oohwpm0y1x"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eI2Efw/W3RmDWP0VvIq06p6vVxhQFqi0RUR1SjurpCA="
+        },
+        {
+          "Name": "label",
+          "Value": "profile_images/images.jpg"
         }
       ]
     },

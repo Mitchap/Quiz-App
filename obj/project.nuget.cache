@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j2erCGgrfFQ=",
+  "dgSpecHash": "j4kCzPT0uas=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenov\\Source\\Repos\\Quiz-App\\Quiz App.csproj",
+  "projectFilePath": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenov\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\lenov\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

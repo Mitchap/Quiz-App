@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\images.jpg",
+      "PackagePath": "staticwebassets\\profile_images\\images.jpg"
+    },
+    {
       "Id": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\wwwroot\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg",
       "PackagePath": "staticwebassets\\profile_images\\moonlit-makima-by-the-pool-1231475401499475988.jpeg"
     },

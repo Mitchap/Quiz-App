@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenov\\Source\\Repos\\Quiz-App\\Quiz App.csproj": {}
+    "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenov\\Source\\Repos\\Quiz-App\\Quiz App.csproj": {
+    "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenov\\Source\\Repos\\Quiz-App\\Quiz App.csproj",
+        "projectUniqueName": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj",
         "projectName": "Quiz App",
-        "projectPath": "C:\\Users\\lenov\\Source\\Repos\\Quiz-App\\Quiz App.csproj",
+        "projectPath": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj",
         "packagesPath": "C:\\Users\\lenov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenov\\Source\\Repos\\Quiz-App\\obj\\",
+        "outputPath": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

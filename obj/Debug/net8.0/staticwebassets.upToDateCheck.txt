@@ -58,4 +58,12 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\profile_images\1ab8ab70-6282-4998-9651-632d23d86a14.png
+wwwroot\profile_images\4cfed00c-9557-4adc-a794-a71f64e251dc.png
+wwwroot\profile_images\4f433caa-2495-49b5-ac0b-aaf492bf535c.png
+wwwroot\profile_images\729c85eb-484d-4915-9934-6e907d2aa7ff.png
+wwwroot\profile_images\c520f925-38b9-4873-a742-b6169d0a628b.png
+wwwroot\profile_images\images.jpg
+wwwroot\profile_images\imgetst.jpeg
+wwwroot\profile_images\imgtst2.jpg
 wwwroot\profile_images\moonlit-makima-by-the-pool-1231475401499475988.jpeg

@@ -9,7 +9,6 @@ namespace Quiz_App.Areas.Identity.Data;
 // Add profile data for application users by adding properties to the Quiz_AppUser class
 public class Quiz_AppUser : IdentityUser
 {
-    public string ProfilePictureUrl { get; set; }
-
+    public string? ProfilePictureUrl { get; set; }
 }
 

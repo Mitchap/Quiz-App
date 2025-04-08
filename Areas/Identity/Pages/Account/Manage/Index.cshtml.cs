@@ -122,11 +122,25 @@ namespace Quiz_App.Areas.Identity.Pages.Account.Manage
             StatusMessage = "Your profile has been updated";
             return RedirectToPage();
         }
-        public async Task<IActionResult> OnPostUploadProfilePictureAsync(IFormFile profilePicture)
+        public async Task<IActionResult> OnPostUploadProfilePictureAsync(IFormFile profilePicture, string CroppedProfilePictureUrl)
         {
             var user = await _userManager.GetUserAsync(User);
 
-            if (profilePicture != null)
+            if (!string.IsNullOrEmpty(CroppedProfilePictureUrl)) 
+            {
+                var base64String = CroppedProfilePictureUrl.Split(',')[1];
+                byte[] imageBytes = Convert.FromBase64String(base64String);
+
+                var fileName = Guid.NewGuid().ToString() + ".png";
+                var filePath = Path.Combine(_environment.WebRootPath, "profile_images", fileName);
+
+                await System.IO.File.WriteAllBytesAsync(filePath, imageBytes);
+                user.ProfilePictureUrl = "/profile_images/" + fileName;
+                await _userManager.UpdateAsync(user);
+
+                StatusMessage = "Your profile picture has been updated.";
+            }
+            else if (profilePicture != null)
             {
                 var fileName = Path.GetFileName(profilePicture.FileName);
                 var filePath = Path.Combine(_environment.WebRootPath, "profile_images", fileName);
@@ -141,9 +155,15 @@ namespace Quiz_App.Areas.Identity.Pages.Account.Manage
 
                 StatusMessage = "Your profile picture has been updated.";
             }
+            else
+            {
+                StatusMessage = "No cropped image was provided.";
+            }
 
             return RedirectToPage("./Index");
         }
 
     }
+
+
 }

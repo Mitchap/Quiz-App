@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F0oFrGpOB1imKiR6WxcPoxQ4lAH06joidGCLehFTfWY=",
+  "Hash": "zXy8nWp0un7AqnEA560sSuTE39F557rIWqBRzNJ4edE=",
   "Source": "Quiz App",
   "BasePath": "_content/Quiz App",
   "Mode": "Default",
@@ -2642,6 +2642,27 @@
       "OriginalItemSpec": "wwwroot\\profile_images\\4f433caa-2495-49b5-ac0b-aaf492bf535c.png"
     },
     {
+      "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\71eefca3-6c9b-419a-8f6f-01f3dff54426.png",
+      "SourceId": "Quiz App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\",
+      "BasePath": "_content/Quiz App",
+      "RelativePath": "profile_images/71eefca3-6c9b-419a-8f6f-01f3dff54426#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d2dptnfzw4",
+      "Integrity": "m0jd35fReDXF1jyUHJOd0w6VhGU6Xz4/HK2UvfLKbiE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_images\\71eefca3-6c9b-419a-8f6f-01f3dff54426.png"
+    },
+    {
       "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\729c85eb-484d-4915-9934-6e907d2aa7ff.png",
       "SourceId": "Quiz App",
       "SourceType": "Discovered",
@@ -2663,6 +2684,48 @@
       "OriginalItemSpec": "wwwroot\\profile_images\\729c85eb-484d-4915-9934-6e907d2aa7ff.png"
     },
     {
+      "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\76946ca4-1732-4db0-bd53-dcf30877f7fd.png",
+      "SourceId": "Quiz App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\",
+      "BasePath": "_content/Quiz App",
+      "RelativePath": "profile_images/76946ca4-1732-4db0-bd53-dcf30877f7fd#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "exlwuy642o",
+      "Integrity": "Aj3XSBvhzs4CIQeI34SuNDOkOFLxHwmq/b2Oqjy49KY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_images\\76946ca4-1732-4db0-bd53-dcf30877f7fd.png"
+    },
+    {
+      "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\c22bffb6-9052-49ed-9b98-71672b3cccea.png",
+      "SourceId": "Quiz App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\",
+      "BasePath": "_content/Quiz App",
+      "RelativePath": "profile_images/c22bffb6-9052-49ed-9b98-71672b3cccea#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u2rp3vd22c",
+      "Integrity": "qpvU2tqwXYjk+4O1PzlfL9OjeUiLF2t5fLHFB+AKAuA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_images\\c22bffb6-9052-49ed-9b98-71672b3cccea.png"
+    },
+    {
       "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\c520f925-38b9-4873-a742-b6169d0a628b.png",
       "SourceId": "Quiz App",
       "SourceType": "Discovered",
@@ -2682,6 +2745,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\profile_images\\c520f925-38b9-4873-a742-b6169d0a628b.png"
+    },
+    {
+      "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\d75244a1-de31-4c39-8eb3-2c02fea7c094.png",
+      "SourceId": "Quiz App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\",
+      "BasePath": "_content/Quiz App",
+      "RelativePath": "profile_images/d75244a1-de31-4c39-8eb3-2c02fea7c094#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rqzk6chepy",
+      "Integrity": "8/ewODKDCs8yjytDkm/f1qrj/67RhEitele6FpjKxMU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_images\\d75244a1-de31-4c39-8eb3-2c02fea7c094.png"
     },
     {
       "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\images.jpg",
@@ -10156,6 +10240,88 @@
       ]
     },
     {
+      "Route": "profile_images/71eefca3-6c9b-419a-8f6f-01f3dff54426.d2dptnfzw4.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\71eefca3-6c9b-419a-8f6f-01f3dff54426.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110686"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m0jd35fReDXF1jyUHJOd0w6VhGU6Xz4/HK2UvfLKbiE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 02:33:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d2dptnfzw4"
+        },
+        {
+          "Name": "label",
+          "Value": "profile_images/71eefca3-6c9b-419a-8f6f-01f3dff54426.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m0jd35fReDXF1jyUHJOd0w6VhGU6Xz4/HK2UvfLKbiE="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/71eefca3-6c9b-419a-8f6f-01f3dff54426.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\71eefca3-6c9b-419a-8f6f-01f3dff54426.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110686"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m0jd35fReDXF1jyUHJOd0w6VhGU6Xz4/HK2UvfLKbiE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 02:33:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m0jd35fReDXF1jyUHJOd0w6VhGU6Xz4/HK2UvfLKbiE="
+        }
+      ]
+    },
+    {
       "Route": "profile_images/729c85eb-484d-4915-9934-6e907d2aa7ff.gizra9ttlf.png",
       "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\729c85eb-484d-4915-9934-6e907d2aa7ff.png",
       "Selectors": [],
@@ -10238,6 +10404,170 @@
       ]
     },
     {
+      "Route": "profile_images/76946ca4-1732-4db0-bd53-dcf30877f7fd.exlwuy642o.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\76946ca4-1732-4db0-bd53-dcf30877f7fd.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "340010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Aj3XSBvhzs4CIQeI34SuNDOkOFLxHwmq/b2Oqjy49KY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 02:09:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "exlwuy642o"
+        },
+        {
+          "Name": "label",
+          "Value": "profile_images/76946ca4-1732-4db0-bd53-dcf30877f7fd.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Aj3XSBvhzs4CIQeI34SuNDOkOFLxHwmq/b2Oqjy49KY="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/76946ca4-1732-4db0-bd53-dcf30877f7fd.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\76946ca4-1732-4db0-bd53-dcf30877f7fd.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "340010"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Aj3XSBvhzs4CIQeI34SuNDOkOFLxHwmq/b2Oqjy49KY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 02:09:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Aj3XSBvhzs4CIQeI34SuNDOkOFLxHwmq/b2Oqjy49KY="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/c22bffb6-9052-49ed-9b98-71672b3cccea.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\c22bffb6-9052-49ed-9b98-71672b3cccea.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207435"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qpvU2tqwXYjk+4O1PzlfL9OjeUiLF2t5fLHFB+AKAuA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 02:23:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpvU2tqwXYjk+4O1PzlfL9OjeUiLF2t5fLHFB+AKAuA="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/c22bffb6-9052-49ed-9b98-71672b3cccea.u2rp3vd22c.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\c22bffb6-9052-49ed-9b98-71672b3cccea.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207435"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qpvU2tqwXYjk+4O1PzlfL9OjeUiLF2t5fLHFB+AKAuA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 02:23:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u2rp3vd22c"
+        },
+        {
+          "Name": "label",
+          "Value": "profile_images/c22bffb6-9052-49ed-9b98-71672b3cccea.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpvU2tqwXYjk+4O1PzlfL9OjeUiLF2t5fLHFB+AKAuA="
+        }
+      ]
+    },
+    {
       "Route": "profile_images/c520f925-38b9-4873-a742-b6169d0a628b.26qjv21on9.png",
       "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\c520f925-38b9-4873-a742-b6169d0a628b.png",
       "Selectors": [],
@@ -10316,6 +10646,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-xh1C89BwZq+Hoynmqgqz7hfo57uEkL6eyHEolnspBPY="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/d75244a1-de31-4c39-8eb3-2c02fea7c094.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\d75244a1-de31-4c39-8eb3-2c02fea7c094.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "228540"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8/ewODKDCs8yjytDkm/f1qrj/67RhEitele6FpjKxMU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 05:13:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8/ewODKDCs8yjytDkm/f1qrj/67RhEitele6FpjKxMU="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/d75244a1-de31-4c39-8eb3-2c02fea7c094.rqzk6chepy.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\d75244a1-de31-4c39-8eb3-2c02fea7c094.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "228540"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8/ewODKDCs8yjytDkm/f1qrj/67RhEitele6FpjKxMU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 05:13:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rqzk6chepy"
+        },
+        {
+          "Name": "label",
+          "Value": "profile_images/d75244a1-de31-4c39-8eb3-2c02fea7c094.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8/ewODKDCs8yjytDkm/f1qrj/67RhEitele6FpjKxMU="
         }
       ]
     },
@@ -10424,7 +10836,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 17:52:29 GMT"
+          "Value": "Tue, 08 Apr 2025 02:55:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10469,7 +10881,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 17:52:29 GMT"
+          "Value": "Tue, 08 Apr 2025 02:55:43 GMT"
         },
         {
           "Name": "Cache-Control",

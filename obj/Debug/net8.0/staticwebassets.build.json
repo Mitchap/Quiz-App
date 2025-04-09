@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zXy8nWp0un7AqnEA560sSuTE39F557rIWqBRzNJ4edE=",
+  "Hash": "LFAnqLVEUME+sSzAO1QZzgkQwvRq4266fQN3N1cKdcE=",
   "Source": "Quiz App",
   "BasePath": "_content/Quiz App",
   "Mode": "Default",
@@ -2703,6 +2703,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\profile_images\\76946ca4-1732-4db0-bd53-dcf30877f7fd.png"
+    },
+    {
+      "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png",
+      "SourceId": "Quiz App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\",
+      "BasePath": "_content/Quiz App",
+      "RelativePath": "profile_images/a397a034-2f6b-4b02-a9aa-5f362ec2fec7#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "052to3n8ts",
+      "Integrity": "FCTF5kQpmbdTyRzJy0IlzTEZpF3xbtQjyknmYSb/P3Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile_images\\a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png"
     },
     {
       "Identity": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\c22bffb6-9052-49ed-9b98-71672b3cccea.png",
@@ -10486,6 +10507,88 @@
       ]
     },
     {
+      "Route": "profile_images/a397a034-2f6b-4b02-a9aa-5f362ec2fec7.052to3n8ts.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "199945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FCTF5kQpmbdTyRzJy0IlzTEZpF3xbtQjyknmYSb/P3Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 06:35:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "052to3n8ts"
+        },
+        {
+          "Name": "label",
+          "Value": "profile_images/a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FCTF5kQpmbdTyRzJy0IlzTEZpF3xbtQjyknmYSb/P3Q="
+        }
+      ]
+    },
+    {
+      "Route": "profile_images/a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png",
+      "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "199945"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FCTF5kQpmbdTyRzJy0IlzTEZpF3xbtQjyknmYSb/P3Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 06:35:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FCTF5kQpmbdTyRzJy0IlzTEZpF3xbtQjyknmYSb/P3Q="
+        }
+      ]
+    },
+    {
       "Route": "profile_images/c22bffb6-9052-49ed-9b98-71672b3cccea.png",
       "AssetFile": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\wwwroot\\profile_images\\c22bffb6-9052-49ed-9b98-71672b3cccea.png",
       "Selectors": [],
@@ -10918,7 +11021,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 17:54:39 GMT"
+          "Value": "Tue, 08 Apr 2025 06:35:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10955,7 +11058,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 17:54:39 GMT"
+          "Value": "Tue, 08 Apr 2025 06:35:55 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -53,7 +53,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- Image to be cropped -->
-                    <div id="crop-container">
+                    <div id="crop-container" class="text-center">
                         <img id="image-to-crop" src="@Model.ProfilePictureUrl" alt="Profile Picture" class="img-fluid mw-100"/>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
             const image = document.getElementById('image-to-crop');
 
             if (cropper) {
-                cropper.destroy();  
+                cropper.destroy();
             }
 
             image.onload = function () {
@@ -103,9 +103,11 @@
                     viewMode: 1, 
                     scalable: true, 
                     zoomable: true, 
-                    movable: true, 
+                    movable: true,
+
                 });
             };
+
             if (image.complete) {
                 image.onload();
             }

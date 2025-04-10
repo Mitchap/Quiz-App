@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\Quiz App.csproj": {}
+    "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\Quiz App.csproj": {
+    "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\Quiz App.csproj",
+        "projectUniqueName": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj",
         "projectName": "Quiz App",
-        "projectPath": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\Quiz App.csproj",
-        "packagesPath": "C:\\Users\\jaims\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaims\\Source\\Repos\\Quiz-App\\obj\\",
+        "projectPath": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\Quiz App.csproj",
+        "packagesPath": "C:\\Users\\lenov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lenov\\source\\repos\\Quiz-App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jaims\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lenov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -88,24 +88,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.13, 8.0.13]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x86",
-              "version": "[8.0.13, 8.0.13]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.13, 8.0.13]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.13, 8.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -114,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

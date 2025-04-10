@@ -1188,6 +1188,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\76946ca4-1732-4db0-bd53-dcf30877f7fd.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Quiz App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Quiz App</BasePath>
+      <RelativePath>profile_images/a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>052to3n8ts</Fingerprint>
+      <Integrity>FCTF5kQpmbdTyRzJy0IlzTEZpF3xbtQjyknmYSb/P3Q=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\a397a034-2f6b-4b02-a9aa-5f362ec2fec7.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\c22bffb6-9052-49ed-9b98-71672b3cccea.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Quiz App</SourceId>

@@ -11,12 +11,23 @@
     <div class="col-auto mb-5">
         <a href="@Url.Action("ListExam","Exam")" class="btn btn-outline-success"><i class="fa-solid fa-arrow-up-from-bracket fa-rotate-270"></i></a>
     </div>
-  
+    <h2>@Model.Title</h2>
+    <p>Total Score: @Model.TotalScore</p>
 
  <section class="text-start">
         <h1 class="">@Model.Title</h1>
         <p class="">Duration: @Model.Duration minute(s)</p>
         <p>Randomize:  <span class="">@GetYesNo(@Model.Randomize)</span></p>
+        <p>
+            Status: <span class="fw-bold @(Model.IsPublished ? "text-success" : "text-danger")">
+                @(Model.IsPublished ? "Published" : "Unpublished")
+            </span>
+        </p>
+        <form asp-action="DeleteExam" asp-controller="Exam" asp-route-id="@Model.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this exam? This will also delete all related questions.')">
+            <button type="submit" class="btn btn-danger">
+                <i class="fa-solid fa-trash"></i> Delete Exam
+            </button>
+        </form>
 
         @* check if value is random or not *@
         @functions {
@@ -27,59 +38,68 @@
         }
 
         <a asp-controller="Exam" asp-action="EditExam" asp-route-id="@Model.Id" class="btn btn-primary">Edit Details</a>
-            
+        <form asp-action="TogglePublish" asp-controller="Exam" asp-route-id="@Model.Id" method="post" class="d-inline">
+            <button type="submit" class="btn @(Model.IsPublished ? "btn-warning" : "btn-success")">
+                @(Model.IsPublished ? "Unpublish" : "Publish")
+            </button>
+        </form>
+
  </section>
 
- <section class="mt-5">
-     <h4>Question</h4>
-        <a asp-controller="Question" asp-action="AddQuestion" asp-route-examId="@Model.Id" class="btn btn-primary">Add Questions</a>
+    <section class="mt-5">
+        <h4>Questions</h4>
+        <a asp-controller="Question" asp-action="AddQuestion" asp-route-examId="@Model.Id" class="btn btn-primary mb-3">Add Questions</a>
 
- </section>
-
-    <section class="row my-5 card p-2 align-items-center justify-content-center justify-content-md-start">
-          <div class="row justify-content-between">
-            <div class="col-auto">
-                <label class="form-label fw-bold" for="QuestionTitle">Question:</label>
-                <p>What does HTML stand for?</p>
-            </div>
-            <div class="col-auto">
-                <a href="#" type="button" class="btn btn-warning"><i class="fa-regular fa-pen-to-square"></i></a>
-            </div>
-          </div>
-        <div class="row">
-            <div class="col-md-8">
-                <p class="fw-bold">Choices:</p>
-                <p>•What does HTML stand for?</p>
-                <p>•What does HTML stand for?</p>
-                <p>•What does HTML stand for?</p>
-                <p>•What does HTML stand for?</p>
-
-            </div>
-
-            <div class="col-md-4">
-                <p class="fw-bold">Answer:</p>
-                <div class="d-flex flex-column gap-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" id="choice1" value="choice1" checked disabled>
-                        <label class="form-check-label" for="choice1">Choice 1</label>
+        @foreach (var question in Model.Questions)
+        {
+            <div class="card p-3 mb-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <label class="fw-bold">Question:</label>
+                        <p>@question.QuestionTitle</p>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" id="choice2" value="choice2" disabled>
-                        <label class="form-check-label" for="choice2">Choice 2</label>
+                    <div class="d-flex gap-2">
+                        <a asp-controller="Question" asp-action="EditQuestion" asp-route-id="@question.Id" class="btn btn-warning">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </a>
+                        <form asp-controller="Question" asp-action="DeleteQuestion" asp-route-id="@question.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this question?');">
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" id="choice3" value="choice3" disabled>
-                        <label class="form-check-label" for="choice3">Choice 3</label>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="fw-bold">Choices:</p>
+                        <p>• @question.Choice_1</p>
+                        <p>• @question.Choice_2</p>
+                        <p>• @question.Choice_3</p>
+                        <p>• @question.Choice_4</p>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" id="choice4" value="choice4" disabled>
-                        <label class="form-check-label" for="choice4">Choice 4</label>
+                    <div class="col-md-4">
+                        <p class="fw-bold">Answer:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" disabled checked />
+                            <label class="form-check-label">
+                                @{
+                                    string actualAnswer = "N/A";
+                                    if (!string.IsNullOrEmpty(question.CorrectAnswer))
+                                    {
+                                        var answerProp = question.GetType().GetProperty(question.CorrectAnswer);
+                                        actualAnswer = answerProp != null ? answerProp.GetValue(question)?.ToString() ?? "N/A" : "N/A";
+                                    }
+                                }
+                                @actualAnswer
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+        }
     </section>
+
 
 </div>
 

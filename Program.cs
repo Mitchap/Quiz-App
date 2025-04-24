@@ -25,6 +25,8 @@ namespace Quiz_App
 
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddHostedService<ExamPublisherService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

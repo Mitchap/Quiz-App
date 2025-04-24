@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Quiz_App.Models.Entities.Question
+
+<div class="container mt-5">
+    <h2>Edit Question</h2>
+
+    <form asp-action="EditQuestion" asp-controller="Question" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="ExamId" />
+
+        <div class="mb-3">
+            <label asp-for="QuestionTitle" class="form-label">Question</label>
+            <input asp-for="QuestionTitle" class="form-control" />
+            <span asp-validation-for="QuestionTitle" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Choice_1" class="form-label">Choice 1</label>
+            <input asp-for="Choice_1" class="form-control" />
+            <span asp-validation-for="Choice_1" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Choice_2" class="form-label">Choice 2</label>
+            <input asp-for="Choice_2" class="form-control" />
+            <span asp-validation-for="Choice_2" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Choice_3" class="form-label">Choice 3</label>
+            <input asp-for="Choice_3" class="form-control" />
+            <span asp-validation-for="Choice_3" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Choice_4" class="form-label">Choice 4</label>
+            <input asp-for="Choice_4" class="form-control" />
+            <span asp-validation-for="Choice_4" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="CorrectAnswer" class="form-label">Correct Answer</label>
+            <select asp-for="CorrectAnswer" class="form-select" required>
+                <option value="">-- Select Correct Answer --</option>
+                <option value="Choice_1" selected="@(Model.CorrectAnswer == "Choice_1")">@Model.Choice_1</option>
+                <option value="Choice_2" selected="@(Model.CorrectAnswer == "Choice_2")">@Model.Choice_2</option>
+                <option value="Choice_3" selected="@(Model.CorrectAnswer == "Choice_3")">@Model.Choice_3</option>
+                <option value="Choice_4" selected="@(Model.CorrectAnswer == "Choice_4")">@Model.Choice_4</option>
+            </select>
+            <span asp-validation-for="CorrectAnswer" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a asp-action="ExamDetails" asp-controller="Exam" asp-route-id="@Model.ExamId" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

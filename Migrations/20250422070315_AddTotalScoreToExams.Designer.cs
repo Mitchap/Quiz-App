@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Quiz_App.Data;
 
@@ -11,9 +12,11 @@ using Quiz_App.Data;
 namespace Quiz_App.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250422070315_AddTotalScoreToExams")]
+    partial class AddTotalScoreToExams
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -239,9 +242,6 @@ namespace Quiz_App.Migrations
                     b.Property<bool>("IsPublished")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime?>("PublishDateTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<bool>("Randomize")
                         .HasColumnType("bit");
 
@@ -288,9 +288,6 @@ namespace Quiz_App.Migrations
                     b.Property<string>("QuestionTitle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Score")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

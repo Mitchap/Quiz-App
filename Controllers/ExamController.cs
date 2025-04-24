@@ -35,7 +35,7 @@ namespace Quiz_App.Controllers
                 Title = viewModel.Title,
                 Duration = viewModel.Duration,
                 Randomize = viewModel.Randomize,
-
+                PublishDateTime = viewModel.PublishDateTime
             };
             
             await dbContext.Exams.AddAsync(exam);
@@ -63,7 +63,9 @@ namespace Quiz_App.Controllers
         [HttpGet]
         public async Task<IActionResult> ExamDetails(Guid id)
         {
-            var exam = await dbContext.Exams.FindAsync(id);
+            var exam = await dbContext.Exams
+                .Include(e => e.Questions)
+                .FirstOrDefaultAsync(e => e.Id == id);
 
             if (exam == null)
             {
@@ -94,12 +96,39 @@ namespace Quiz_App.Controllers
                 exam.Title = viewModel.Title;
                 exam.Duration = viewModel.Duration;
                 exam.Randomize = viewModel.Randomize;
+                exam.PublishDateTime = viewModel.PublishDateTime;
 
                 await dbContext.SaveChangesAsync();
             }
             return RedirectToAction("ListExam", "Exam");
         }
+        public async Task<IActionResult> TogglePublish(Guid id)
+        {
+            var exam = await dbContext.Exams.FindAsync(id);
+            if (exam == null) return NotFound();
 
+            exam.IsPublished = !exam.IsPublished;
+            await dbContext.SaveChangesAsync();
+
+            return RedirectToAction("ExamDetails", new { id });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteExam(Guid id)
+        {
+            var exam = await dbContext.Exams
+                .Include(e => e.Questions)
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            if (exam == null) return NotFound();
+
+            dbContext.Questions.RemoveRange(exam.Questions);
+            dbContext.Exams.Remove(exam);
+
+            await dbContext.SaveChangesAsync();
+
+            return RedirectToAction("ListExam");
+        }
 
 
     }

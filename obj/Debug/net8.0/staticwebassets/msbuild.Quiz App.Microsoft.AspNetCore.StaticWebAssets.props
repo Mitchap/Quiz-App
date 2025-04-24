@@ -1134,6 +1134,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\1ab8ab70-6282-4998-9651-632d23d86a14.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\3eeea483-248e-498a-960b-b7dfff0d07d3.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Quiz App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Quiz App</BasePath>
+      <RelativePath>profile_images/3eeea483-248e-498a-960b-b7dfff0d07d3.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>iko9db16sp</Fingerprint>
+      <Integrity>XlLyl2BGIiDcE1Jpx0LXmkISLehq/gZtDTyBfKBiwho=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\3eeea483-248e-498a-960b-b7dfff0d07d3.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\4cfed00c-9557-4adc-a794-a71f64e251dc.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Quiz App</SourceId>
@@ -1278,6 +1296,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\c22bffb6-9052-49ed-9b98-71672b3cccea.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\c49b0b07-5c00-43a5-8d6c-fa3dbf9129d0.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Quiz App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Quiz App</BasePath>
+      <RelativePath>profile_images/c49b0b07-5c00-43a5-8d6c-fa3dbf9129d0.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o4jy8s4ujl</Fingerprint>
+      <Integrity>qLKRE3xaCwfJiOdYrW0PeU3Timy0qd7h1cvQphKwDUU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\c49b0b07-5c00-43a5-8d6c-fa3dbf9129d0.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\c520f925-38b9-4873-a742-b6169d0a628b.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Quiz App</SourceId>
@@ -1313,6 +1349,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\d75244a1-de31-4c39-8eb3-2c02fea7c094.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\efe696e4d568cd1960c52804cb17b46b.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Quiz App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Quiz App</BasePath>
+      <RelativePath>profile_images/efe696e4d568cd1960c52804cb17b46b.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jl8lz3y2y9</Fingerprint>
+      <Integrity>x62ih8FOsCF8Fd6Aa7mhMBdC/mp5C70jdc9RoxFH6/8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\efe696e4d568cd1960c52804cb17b46b.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\profile_images\images.jpg'))">
       <SourceType>Package</SourceType>

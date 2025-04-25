@@ -202,7 +202,6 @@ namespace Quiz_App.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ProfilePictureUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
@@ -288,6 +287,40 @@ namespace Quiz_App.Migrations
                     b.ToTable("Questions");
                 });
 
+            modelBuilder.Entity("Quiz_App.Models.Entities.QuizTaker", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ExamId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("FName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastSchool")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Score")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExamId");
+
+                    b.ToTable("QuizTaker");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -350,9 +383,20 @@ namespace Quiz_App.Migrations
                     b.Navigation("Exam");
                 });
 
+            modelBuilder.Entity("Quiz_App.Models.Entities.QuizTaker", b =>
+                {
+                    b.HasOne("Quiz_App.Models.Entities.Exam", "Exam")
+                        .WithMany("QuizTakers")
+                        .HasForeignKey("ExamId");
+
+                    b.Navigation("Exam");
+                });
+
             modelBuilder.Entity("Quiz_App.Models.Entities.Exam", b =>
                 {
                     b.Navigation("Questions");
+
+                    b.Navigation("QuizTakers");
                 });
 #pragma warning restore 612, 618
         }

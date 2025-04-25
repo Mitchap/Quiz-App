@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Quiz_App.Data;
 
@@ -11,9 +12,11 @@ using Quiz_App.Data;
 namespace Quiz_App.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250422005642_NullableQuizTaker")]
+    partial class NullableQuizTaker
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -236,21 +239,12 @@ namespace Quiz_App.Migrations
                     b.Property<int>("Duration")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsPublished")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("PublishDateTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<bool>("Randomize")
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TotalScore")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -289,9 +283,6 @@ namespace Quiz_App.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Score")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ExamId");
@@ -308,9 +299,6 @@ namespace Quiz_App.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ExamId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("FName")
                         .HasColumnType("nvarchar(max)");
 
@@ -323,12 +311,13 @@ namespace Quiz_App.Migrations
                     b.Property<string>("Pin")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("QuizId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int?>("Score")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ExamId");
 
                     b.ToTable("QuizTaker");
                 });
@@ -395,20 +384,9 @@ namespace Quiz_App.Migrations
                     b.Navigation("Exam");
                 });
 
-            modelBuilder.Entity("Quiz_App.Models.Entities.QuizTaker", b =>
-                {
-                    b.HasOne("Quiz_App.Models.Entities.Exam", "Exam")
-                        .WithMany("QuizTakers")
-                        .HasForeignKey("ExamId");
-
-                    b.Navigation("Exam");
-                });
-
             modelBuilder.Entity("Quiz_App.Models.Entities.Exam", b =>
                 {
                     b.Navigation("Questions");
-
-                    b.Navigation("QuizTakers");
                 });
 #pragma warning restore 612, 618
         }

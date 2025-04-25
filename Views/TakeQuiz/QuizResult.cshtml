@@ -1,0 +1,29 @@
+﻿@model Quiz_App.Models.QuizResultViewModel
+
+@{
+    ViewData["Title"] = "Quiz Result";
+    Layout = "_StudentLayout";
+
+    int total = Model.TotalQuestions * 2;
+}
+
+<h2>Quiz Results for @Model.QuizTaker.FName @Model.QuizTaker.LName</h2>
+<p><strong>Score:</strong> @Model.TotalScore / @total</p>
+
+@foreach (var result in Model.Results)
+{
+    <div class="question-block mb-4">
+        <h5>@result.Question.QuestionTitle</h5>
+        <p>
+            <strong>Your Answer:</strong>
+            <span style="color:@(result.IsCorrect ? "green" : "red")">
+                @result.UserAnswer
+            </span>
+        </p>
+        @if (!result.IsCorrect)
+        {
+            <p><strong>Correct Answer:</strong> @result.Question.CorrectAnswer</p>
+        }
+        <hr />
+    </div>
+}

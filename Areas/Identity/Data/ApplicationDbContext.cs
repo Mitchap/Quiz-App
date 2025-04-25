@@ -24,4 +24,5 @@ public class ApplicationDbContext : IdentityDbContext<Quiz_AppUser>
     public DbSet<Exam> Exams { get; set; }
     public DbSet<Question> Questions { get; set; }
 
+    public DbSet<QuizTaker> QuizTakers { get; set; }
 }

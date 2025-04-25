@@ -1,0 +1,58 @@
+﻿@{
+	Layout = "_StudentLayout";
+
+    var quizTakerId = TempData["QuizTakerId"];
+}
+
+@model Quiz_App.Models.Entities.QuizTaker
+
+<div class="d-flex flex-column justify-content-between align-items-center gap-4">
+	<h1 class="mb-4">Instructions</h1>
+
+	<div class="border border-3 p-2 text-center border-dark" style="max-width: 1000px;">
+		<p class="mb-0">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium interdum cursus. Pellentesque erat felis, tincidunt a diam vel,			fringilla maximus orci. Nullam facilisis tempus dignissim. Nam vitae ligula sed orci sodales bibendum eu viverra purus. Integer luctus			mi at. consectetur ullamcorper. Morbi porta laoreet tellus eu consequat. Sed luctus risus nunc, eu ullamcorper nunc mollis non.
+		</p>
+	</div>
+
+	<div class="border border-3 p-2 text-center border-dark" style="max-width: 1000px;">
+		<p class="mb-0">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium interdum cursus. Pellentesque erat felis, tincidunt a diam vel,			fringilla maximus orci. Nullam facilisis tempus dignissim. Nam vitae ligula sed orci sodales bibendum eu viverra purus. Integer luctus			mi at. consectetur ullamcorper. Morbi porta laoreet tellus eu consequat. Sed luctus risus nunc, eu ullamcorper nunc mollis non.
+		</p>
+	</div>
+
+	<div class="border border-3 p-2 text-center border-dark" style="max-width: 1000px;">
+		<p class="mb-0">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium interdum cursus. Pellentesque erat felis, tincidunt a diam vel,			fringilla maximus orci. Nullam facilisis tempus dignissim. Nam vitae ligula sed orci sodales bibendum eu viverra purus. Integer luctus			mi at. consectetur ullamcorper. Morbi porta laoreet tellus eu consequat. Sed luctus risus nunc, eu ullamcorper nunc mollis non.
+		</p>
+	</div>
+
+	<form method="post" asp-action="SubmitDetails" class="d-flex flex-column gap-3 justify-content-between" style="min-width:1000px">
+
+		<input type="hidden" name="Id" value="@quizTakerId" />
+		<input type="hidden" name="ExamId" value="3999ee41-2549-48f5-769c-08dd82c616ef" />
+
+		<div class="d-flex gap-2">
+			<div class="w-100">
+				<h3>First Name</h3>
+				<input asp-for="FName" type="text" class="form-control" placeholder="Enter Your First Name">
+			</div>
+
+			<div class="align-self-center w-100">
+				<h3>Last Name</h3>
+				<input asp-for="LName" type="text" class="form-control" placeholder="Enter Your Last Name">
+			</div>
+		</div>
+
+		<div class="align-self-center w-100">
+			<h3>Last School</h3>
+			<input asp-for="LastSchool" type="text" class="form-control" placeholder="Enter Your FLast School">
+		</div>
+
+		<div class="d-flex align-self-end justify-content-center">
+			<button type="submit" class="btn btn-primary btn-lg">
+				Continue
+			</button>
+		</div>
+	</form>
+</div>

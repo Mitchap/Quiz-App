@@ -1,0 +1,28 @@
+﻿
+@{
+	Layout = "_StudentLayout";
+}
+
+@model Quiz_App.Models.Entities.QuizTaker
+
+
+<div class="container-fluid w-50 flex-md-column d-flex" style="background-color:lightgrey">
+	<div class="d-flex align-items-center justify-content-center" style=""> 
+		<h2 class="text-center m-3">
+			Enter Pin Your Test Pin
+		</h2>
+	</div>
+
+	<form method="post" asp-action="SubmitPin">
+		<div class="align-self-center w-100">
+			<input asp-for="Pin" type="text" class="form-control" placeholder="Enter Your Pin">
+		</div>
+
+		<div class="d-flex align-items-center justify-content-center m-3">
+			<button type="submit" class="btn btn-primary btn-lg">
+				Continue
+			</button>
+		</div>
+	</form>
+	
+</div>

@@ -4,7 +4,21 @@
     ViewData["Title"] = "Quiz Result";
     Layout = "_StudentLayout";
 
-    int total = Model.TotalQuestions * 2;
+    int total = Model.Results.Sum(r => r.Question.Score);
+}
+
+@functions {
+    public string DisplayAnswerText(string answerKey, Quiz_App.Models.Entities.Question question)
+    {
+        return answerKey switch
+        {
+            "Choice_1" => question.Choice_1,
+            "Choice_2" => question.Choice_2,
+            "Choice_3" => question.Choice_3,
+            "Choice_4" => question.Choice_4,
+            _ => "Unknown"
+        };
+    }
 }
 
 <h2>Quiz Results for @Model.QuizTaker.FName @Model.QuizTaker.LName</h2>
@@ -17,12 +31,13 @@
         <p>
             <strong>Your Answer:</strong>
             <span style="color:@(result.IsCorrect ? "green" : "red")">
-                @result.UserAnswer
+                @DisplayAnswerText(result.UserAnswer, result.Question)
             </span>
         </p>
+        <p><strong>Points:</strong> @result.Question.Score</p>
         @if (!result.IsCorrect)
         {
-            <p><strong>Correct Answer:</strong> @result.Question.CorrectAnswer</p>
+            <p><strong>Correct Answer:</strong> @DisplayAnswerText(result.Question.CorrectAnswer, result.Question)</p>
         }
         <hr />
     </div>

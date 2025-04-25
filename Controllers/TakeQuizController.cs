@@ -105,32 +105,39 @@ namespace Quiz_App.Controllers
                 var question = questions.FirstOrDefault(q => q.Id == QuestionIds[i]);
                 if (question == null) continue;
 
-                string userAnswer = Answers[i]; // e.g., "choice1"
+                string userAnswer = Answers[i]; // e.g., "Choice_1"
+
                 string? userAnswerValue = userAnswer switch
                 {
-                    "choice1" => question.Choice_1,
-                    "choice2" => question.Choice_2,
-                    "choice3" => question.Choice_3,
-                    "choice4" => question.Choice_4,
-                    _ => null
+                    "Choice_1" => question.Choice_1,
+                    "Choice_2" => question.Choice_2,
+                    "Choice_3" => question.Choice_3,
+                    "Choice_4" => question.Choice_4,
+                    _ => userAnswer // fallback to direct text
                 };
 
                 string? correctAnswerValue = question.CorrectAnswer switch
                 {
-                    "choice1" => question.Choice_1,
-                    "choice2" => question.Choice_2,
-                    "choice3" => question.Choice_3,
-                    "choice4" => question.Choice_4,
-                    _ => question.CorrectAnswer // fallback if it's the actual value
+                    "Choice_1" => question.Choice_1,
+                    "Choice_2" => question.Choice_2,
+                    "Choice_3" => question.Choice_3,
+                    "Choice_4" => question.Choice_4,
+                    _ => question.CorrectAnswer // fallback to direct text
                 };
 
-                bool isCorrect = userAnswerValue?.Trim().ToLower() == correctAnswerValue?.Trim().ToLower();
-                if (isCorrect) score+=2;
+                // Normalize and compare
+                string normalizedUser = (userAnswerValue ?? "").Trim().ToLowerInvariant();
+                string normalizedCorrect = (correctAnswerValue ?? "").Trim().ToLowerInvariant();
+
+                bool isCorrect = normalizedUser == normalizedCorrect;
+
+                if (isCorrect)
+                    score += question.Score; // use the actual score value per question
 
                 results.Add(new QuestionResult
                 {
                     Question = question,
-                    UserAnswer = userAnswer, // Still "choice1", etc.
+                    UserAnswer = userAnswer, // this stays as "Choice_X" or raw
                     IsCorrect = isCorrect
                 });
             }

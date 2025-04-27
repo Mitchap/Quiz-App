@@ -65,6 +65,7 @@ namespace Quiz_App.Controllers
         {
             var exam = await dbContext.Exams
                 .Include(e => e.Questions)
+                .Include(e => e.QuizTakers) // include quiztakers in examdetails view
                 .FirstOrDefaultAsync(e => e.Id == id);
 
             if (exam == null)

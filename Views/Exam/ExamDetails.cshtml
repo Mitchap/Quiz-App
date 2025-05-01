@@ -107,6 +107,17 @@
         </div>
     </section>
 
+    <h5 class="mt-4">Invite a Student</h5>
+    <form asp-controller="Exam" asp-action="AddQuizTaker" method="post" class="row g-3 mb-4">
+        <input type="hidden" name="examId" value="@Model.Id" />
+        <div class="col-md-6">
+            <input type="email" name="email" class="form-control" placeholder="Student Email" required />
+        </div>
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-primary">Invite</button>
+        </div>
+    </form>
+
     <section class="mt-5">
         <h4>Quiz Takers</h4>
 
@@ -118,6 +129,8 @@
                     <th>Email</th>
                     <th>School</th>
                     <th>Score</th>
+                    <th>Pin</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -129,6 +142,8 @@
                         <td>@taker.Email</td>
                         <td>@taker.LastSchool</td>
                         <td>@taker.Score</td>
+                        <td>@taker.Pin</td>
+                        <td>@taker.Status</td>
                     </tr>
                 }
             </tbody>

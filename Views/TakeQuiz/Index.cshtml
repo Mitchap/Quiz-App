@@ -1,28 +1,38 @@
-﻿
-@{
-	Layout = "_StudentLayout";
+﻿@{
+    Layout = "_StudentLayout";
+    var examId = Context.Request.Query["examId"];
 }
 
-@model Quiz_App.Models.Entities.QuizTaker
+<div class="container-fluid w-50 flex-md-column d-flex">
+    <div class="d-flex align-items-center justify-content-center">
+        <h2 class="text-center m-3">
+            Enter Your Test PIN
+        </h2>
+    </div>
 
+    @if (ViewData.ModelState.ErrorCount > 0)
+    {
+        <div class="alert alert-danger">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
 
-<div class="container-fluid w-50 flex-md-column d-flex" style="background-color:lightgrey">
-	<div class="d-flex align-items-center justify-content-center" style=""> 
-		<h2 class="text-center m-3">
-			Enter Pin Your Test Pin
-		</h2>
-	</div>
+    <form method="post" asp-action="SubmitPin">
+        <div class="mb-3">
+            <input name="email" type="email" class="form-control" placeholder="Enter Your Email" required />
+        </div>
 
-	<form method="post" asp-action="SubmitPin">
-		<div class="align-self-center w-100">
-			<input asp-for="Pin" type="text" class="form-control" placeholder="Enter Your Pin">
-		</div>
+        <div class="mb-3">
+            <input name="pin" type="text" class="form-control" placeholder="Enter Your PIN" required />
+        </div>
 
-		<div class="d-flex align-items-center justify-content-center m-3">
-			<button type="submit" class="btn btn-primary btn-lg">
-				Continue
-			</button>
-		</div>
-	</form>
-	
+        <div class="d-flex align-items-center justify-content-center m-3">
+            <button type="submit" class="btn btn-primary btn-lg">
+                Continue
+            </button>
+        </div>
+    </form>
 </div>

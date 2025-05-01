@@ -27,10 +27,10 @@ namespace Quiz_App.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Save the data to the database
                 var quizTakerEntry = new QuizTaker
                 {
                     Pin = model.Pin,
+                    IsUsed = true,
                 };
 
                 await _context.QuizTakers.AddAsync(quizTakerEntry);
@@ -41,7 +41,6 @@ namespace Quiz_App.Controllers
                 return RedirectToAction("Instructions");
             }
             return View();
-
         }
 
         public IActionResult Instructions()
@@ -142,7 +141,6 @@ namespace Quiz_App.Controllers
                 });
             }
 
-            // Save the score
             quizTaker.Score = score;
             _context.SaveChanges();
 

@@ -13,7 +13,13 @@ namespace Quiz_App.Models.Entities
         public string? Pin { get; set; }
         public string? LastSchool { get; set; }
         public int? Score { get; set; }
+        public bool IsUsed { get; set; }
 
         public virtual Exam? Exam { get; set; }
+
+        public QuizTaker()
+        {
+            IsUsed = false;
+        }
     }
 }

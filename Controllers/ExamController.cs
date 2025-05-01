@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View;
 using Quiz_App.Data;
 using Quiz_App.Models.Entities;
 
+
 namespace Quiz_App.Controllers
 {
 
@@ -12,10 +13,14 @@ namespace Quiz_App.Controllers
     public class ExamController : Controller
     {
         private readonly ApplicationDbContext dbContext;
+        private readonly EmailService _emailService; // EmailService dependency
 
-        public ExamController(ApplicationDbContext dbContext)
+
+        // Constructor with EmailService injection
+        public ExamController(ApplicationDbContext context, EmailService emailService)
         {
-            this.dbContext = dbContext;
+            dbContext = context;
+            _emailService = emailService; // Initialize EmailService
         }
 
         //adding exams
@@ -131,6 +136,47 @@ namespace Quiz_App.Controllers
             return RedirectToAction("ListExam");
         }
 
+        [HttpPost]
+        public async Task<IActionResult> AddQuizTaker(Guid examId, string email)
+        {
+            var exam = await dbContext.Exams.FindAsync(examId);
+            if (exam == null) return NotFound();
+
+            // Create the QuizTaker
+            var id = Guid.NewGuid();
+            var pin = id.ToString("N").Substring(0, 6); // Take first 6 hex characters
+
+            var quizTaker = new QuizTaker
+            {
+                Id = id,
+                ExamId = examId,
+                Email = email,
+                Pin = pin
+            };
+
+            dbContext.QuizTakers.Add(quizTaker);
+            await dbContext.SaveChangesAsync();
+
+            // Send email with the PIN and exam details
+            try
+            {
+                var subject = $"Access to Quiz: {exam.Title}";
+                var quizLink = $"https://localhost:7166/TakeQuiz?examId={examId}";
+                var body = $"You have been invited to take the quiz '{exam.Title}'.<br><br>" +
+                           $"Use this link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
+                           $"Your PIN: {pin}";
+
+                await _emailService.SendEmailAsync(email, subject, body);
+
+                TempData["Success"] = $"Student invited with PIN: {pin}";
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = $"Failed to send email: {ex.Message}";
+            }
+
+            return RedirectToAction("ExamDetails", new { id = examId });
+        }
 
     }
 }

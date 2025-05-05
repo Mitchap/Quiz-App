@@ -25,88 +25,6 @@ namespace Quiz_App.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddQuizTaker(string email, Guid examId)
-        {
-            if (string.IsNullOrWhiteSpace(email) || !IsValidEmail(email))
-            {
-                ModelState.AddModelError("", "Invalid email format.");
-                return View("Index");
-            }
-
-            var newId = Guid.NewGuid();
-            var pin = newId.ToString().Substring(0, 6);
-
-            var quizTaker = new QuizTaker
-            {
-                Id = newId,
-                Email = email,
-                ExamId = examId,
-                Pin = pin,
-            };
-
-            await _context.QuizTakers.AddAsync(quizTaker);
-            await _context.SaveChangesAsync();
-
-            var exam = await _context.Exams.FindAsync(examId);
-            if (exam != null)
-            {
-                try
-                {
-                    // Sending Email
-                    var emailSent = await SendEmailAsync(email, exam, pin, examId);
-                    if (!emailSent)
-                    {
-                        ModelState.AddModelError("", "Failed to send email. Please try again.");
-                        return View("Index");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    ModelState.AddModelError("", $"Error sending email: {ex.Message}");
-                    return View("Index");
-                }
-            }
-
-            return RedirectToAction("ExamDetails", "Exam", new { id = examId });
-        }
-
-        private async Task<bool> SendEmailAsync(string email, Exam exam, string pin, Guid examId)
-        {
-            try
-            {
-                var smtpClient = new SmtpClient(_configuration["EmailSettings:SmtpServer"])
-                {
-                    Port = int.Parse(_configuration["EmailSettings:Port"]),
-                    Credentials = new NetworkCredential(
-                        _configuration["EmailSettings:Username"],
-                        _configuration["EmailSettings:Password"]
-                    ),
-                    EnableSsl = true
-                };
-
-                var message = new MailMessage
-                {
-                    From = new MailAddress(
-                        _configuration["EmailSettings:SenderEmail"],
-                        _configuration["EmailSettings:SenderName"]
-                    ),
-                    Subject = $"Access to Quiz: {exam.Title}",
-                    Body = $"You have been invited to take the quiz '{exam.Title}'.\n\nUse this link to access the quiz: https://yourapp.com/TakeQuiz?examId={examId}\nYour PIN: {pin}",
-                    IsBodyHtml = false
-                };
-                message.To.Add(email);
-
-                await smtpClient.SendMailAsync(message);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"❌ Failed to send email: {ex.Message}");
-                return false;
-            }
-        }
-
         private bool IsValidEmail(string email)
         {
             var emailRegex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
@@ -191,7 +109,6 @@ namespace Quiz_App.Controllers
             // If we reached here, there were model state errors or something went wrong, show the form again with errors
             return View("Instructions", model);
         }
-
 
         public IActionResult Quiz(Guid id)
         {

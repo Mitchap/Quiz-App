@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View;
 using Quiz_App.Data;
 using Quiz_App.Models.Entities;
+using System.Net.Mail;
+using System.Net;
+using static Org.BouncyCastle.Math.EC.ECCurve;
 
 
 namespace Quiz_App.Controllers
@@ -14,13 +17,16 @@ namespace Quiz_App.Controllers
     {
         private readonly ApplicationDbContext dbContext;
         private readonly EmailService _emailService; // EmailService dependency
+        private readonly IConfiguration _config;
+        private readonly IConfiguration _configuration;
+        private readonly string _baseUrl;
 
-
-        // Constructor with EmailService injection
-        public ExamController(ApplicationDbContext context, EmailService emailService)
+        public ExamController(ApplicationDbContext context, EmailService emailService, IConfiguration config)
         {
             dbContext = context;
-            _emailService = emailService; // Initialize EmailService
+            _emailService = emailService;
+            _config = config;
+            _baseUrl = _config["AppSettings:BaseUrl"];
         }
 
         //adding exams
@@ -161,7 +167,7 @@ namespace Quiz_App.Controllers
             try
             {
                 var subject = $"Access to Quiz: {exam.Title}";
-                var quizLink = $"https://localhost:7166/TakeQuiz?examId={examId}";
+                var quizLink = $"{_baseUrl}/TakeQuiz?examId={examId}";
                 var body = $"You have been invited to take the quiz '{exam.Title}'.<br><br>" +
                            $"Use this link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
                            $"Your PIN: {pin}";

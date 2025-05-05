@@ -120,7 +120,35 @@ namespace Quiz_App.Controllers
             if (exam == null) return NotFound();
 
             exam.IsPublished = !exam.IsPublished;
-            await dbContext.SaveChangesAsync();
+
+            if (exam.IsPublished)
+            {
+                var quizTakers = await dbContext.QuizTakers
+                    .Where(qt => qt.ExamId == id && !qt.IsUsed)
+                    .ToListAsync();
+            
+                foreach(var quizTaker in quizTakers)
+                {
+                    string email = quizTaker.Email;
+                    string subject = $"You have been invited to take the quiz '{exam.Title}'";
+                    string quizLink = $"{_baseUrl}/TakeQuiz?examId={exam.Id}";
+                    string body = $"Hello, you have been invited to take the quiz '{exam.Title}'.<br><br>" +
+                                  $"Use the following link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
+                                  $"Your PIN: {quizTaker.Pin}";
+
+                    try
+                    {
+                        await _emailService.SendEmailAsync(email, subject, body);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        TempData["Error"] = $"Failed to send email: {ex.Message}";
+                    }
+                }
+            }
+
+            await dbContext.SaveChangesAsync(); 
 
             return RedirectToAction("ExamDetails", new { id });
         }
@@ -164,25 +192,27 @@ namespace Quiz_App.Controllers
             await dbContext.SaveChangesAsync();
 
             // Send email with the PIN and exam details
-            try
+            if (exam.IsPublished)
             {
-                var subject = $"Access to Quiz: {exam.Title}";
-                var quizLink = $"{_baseUrl}/TakeQuiz?examId={examId}";
-                var body = $"You have been invited to take the quiz '{exam.Title}'.<br><br>" +
-                           $"Use this link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
-                           $"Your PIN: {pin}";
+                try
+                {
+                    var subject = $"Access to Quiz: {exam.Title}";
+                    var quizLink = $"{_baseUrl}/TakeQuiz?examId={examId}";
+                    var body = $"You have been invited to take the quiz '{exam.Title}'.<br><br>" +
+                               $"Use this link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
+                               $"Your PIN: {pin}";
 
-                await _emailService.SendEmailAsync(email, subject, body);
+                    await _emailService.SendEmailAsync(email, subject, body);
 
-                TempData["Success"] = $"Student invited with PIN: {pin}";
+                    TempData["Success"] = $"Student invited with PIN: {pin}";
+                }
+                catch (Exception ex)
+                {
+                    TempData["Error"] = $"Failed to send email: {ex.Message}";
+                }
             }
-            catch (Exception ex)
-            {
-                TempData["Error"] = $"Failed to send email: {ex.Message}";
-            }
-
+            
             return RedirectToAction("ExamDetails", new { id = examId });
         }
-
     }
 }

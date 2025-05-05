@@ -34,10 +34,15 @@
                 @DisplayAnswerText(result.UserAnswer, result.Question)
             </span>
         </p>
-        <p><strong>Points:</strong> @result.Question.Score</p>
+
         @if (!result.IsCorrect)
         {
             <p><strong>Correct Answer:</strong> @DisplayAnswerText(result.Question.CorrectAnswer, result.Question)</p>
+            <p><strong>Points:</strong> 0</p>
+        }
+        else
+        {
+            <p><strong>Points:</strong> @result.Question.Score</p>
         }
         <hr />
     </div>

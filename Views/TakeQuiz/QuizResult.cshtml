@@ -1,0 +1,55 @@
+﻿@model Quiz_App.Models.QuizResultViewModel
+
+@{
+    ViewData["Title"] = "Quiz Result";
+    Layout = "_StudentLayout";
+
+    int total = Model.Results.Sum(r => r.Question.Score);
+}
+
+@functions {
+    public string DisplayAnswerText(string answerKey, Quiz_App.Models.Entities.Question question)
+    {
+        return answerKey switch
+        {
+            "Choice_1" => question.Choice_1,
+            "Choice_2" => question.Choice_2,
+            "Choice_3" => question.Choice_3,
+            "Choice_4" => question.Choice_4,
+            _ => "Unknown"
+        };
+    }
+}
+
+<h2>Quiz Results for @Model.QuizTaker.FName @Model.QuizTaker.LName</h2>
+<p><strong>Score:</strong> @Model.TotalScore / @total</p>
+
+@foreach (var result in Model.Results)
+{
+    <div class="question-block mb-4">
+        <h5>@result.Question.QuestionTitle</h5>
+        <p>
+            <strong>Your Answer:</strong>
+            <span style="color:@(result.IsCorrect ? "green" : "red")">
+                @DisplayAnswerText(result.UserAnswer, result.Question)
+            </span>
+        </p>
+
+        @if (!result.IsCorrect)
+        {
+            <p><strong>Correct Answer:</strong> @DisplayAnswerText(result.Question.CorrectAnswer, result.Question)</p>
+            <p><strong>Points:</strong> 0</p>
+        }
+        else
+        {
+            <p><strong>Points:</strong> @result.Question.Score</p>
+        }
+        <hr />
+    </div>
+}
+<script>
+    history.pushState(null, null, location.href);
+    window.onpopstate = function() {
+        history.go(1);
+    };
+</script>

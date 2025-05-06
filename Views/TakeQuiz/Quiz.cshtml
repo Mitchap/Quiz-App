@@ -1,0 +1,36 @@
+﻿@{
+	ViewData["Title"] = "Quiz";
+	Layout = "_StudentLayout";
+}
+
+@model Quiz_App.Models.Entities.QuizTaker
+
+<h1>The Quiz</h1>
+<div>
+    <div class="d-flex flex-column">
+        <h2>@Model.Exam.Title</h2>
+        <p><strong>Duration:</strong> @Model.Exam.Duration minutes</p>
+
+        <form method="post" asp-action="SubmitQuiz">
+            @for (int i = 0; i < Model.Exam.Questions.Count; i++)
+            {
+                var question = Model.Exam.Questions.ElementAt(i);
+                <div class="question-block mb-4 border-2">
+                    <h5>Question @(i + 1): @question.QuestionTitle</h5>
+                    <div>
+                        <input type="radio" name="Answers[@i]" value="Choice_1" required /> @question.Choice_1 <br />
+                        <input type="radio" name="Answers[@i]" value="Choice_2" /> @question.Choice_2 <br />
+                        <input type="radio" name="Answers[@i]" value="Choice_3" /> @question.Choice_3 <br />
+                        <input type="radio" name="Answers[@i]" value="Choice_4" /> @question.Choice_4 <br />
+                    </div> 
+
+                    <input type="hidden" name="QuestionIds[@i]" value="@question.Id" />
+                </div>
+            }
+
+            <input type="hidden" name="QuizTakerId" value="@Model.Id" />
+
+            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+        </form>
+    </div>
+</div>

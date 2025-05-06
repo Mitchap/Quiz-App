@@ -1,0 +1,132 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+
+<h3>@ViewData["Title"]</h3>
+<partial name="_StatusMessage" for="StatusMessage" />
+
+<div class="row ">
+    <div class="col-md-6">
+        <form method="post" enctype="multipart/form-data" asp-page-handler="UploadProfilePicture">
+            <div class="form-group">
+                <label for="profilePicture">Choose a Profile Picture</label>
+                <input type="file" class="form-control" id="profilePicture" name="ProfilePicture" onchange="previewImage(event)" />
+            </div>
+
+            <div class="form-group mt-3">
+                <img id="profilePreview" src="@Model.ProfilePictureUrl" alt="Profile Preview" class="img-thumbnail img-fluid" style="width: 500px; height: 500px;" />
+            </div>
+
+            <!--store Cropped img-->
+            <input type="hidden" id="croppedImageUrl" name="CroppedProfilePictureUrl" />
+
+            <button type="button" class="btn btn-primary mt-3 mb-3" onclick="openCropModal()">Crop</button>
+            <button type="submit" class="btn btn-primary mt-3 mb-3">Save Changes</button>
+        </form>
+
+        <form id="profile-form" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Username" class="form-control" placeholder="Please choose your username." disabled />
+                <label asp-for="Username" class="form-label"></label>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number." />
+                <label asp-for="Input.PhoneNumber" class="form-label"></label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Update</button>
+        </form>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="cropModal" tabindex="-1" aria-labelledby="cropModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cropModalLabel">Crop Your Profile Picture</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Image to be cropped -->
+                    <div id="crop-container" class="text-center">
+                        <img id="image-to-crop" src="@Model.ProfilePictureUrl" alt="Profile Picture" class="img-fluid mw-100"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="crop-button" class="btn btn-primary" onclick="cropImage()">Crop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        // Function to preview image
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function () {
+                const preview = document.getElementById('profilePreview');
+                preview.src = reader.result; // Set the image source to the uploaded file
+            };
+
+            if (file) {
+                reader.readAsDataURL(file); // Read the file as data URL
+            }
+        }
+
+
+        //to show Modal
+        let cropper;  
+        function openCropModal() {
+            $('#cropModal').modal('show'); 
+
+            const image = document.getElementById('image-to-crop');
+
+            if (cropper) {
+                cropper.destroy();
+            }
+
+            image.onload = function () {
+                cropper = new Cropper(image, {
+                    aspectRatio: 1, 
+                    viewMode: 1, 
+                    scalable: true, 
+                    zoomable: true, 
+                    movable: true,
+
+                });
+            };
+
+            if (image.complete) {
+                image.onload();
+            }
+        }
+
+        //cropping
+        function cropImage() {
+            const canvas = cropper.getCroppedCanvas({
+                width: 500,
+                height: 500,
+            });
+
+            const croppedImageUrl = canvas.toDataURL();
+
+            document.getElementById('profilePreview').src = croppedImageUrl;
+            document.getElementById('croppedImageUrl').value = croppedImageUrl;
+
+            $('#cropModal').modal('hide');
+        }
+
+    </script>
+}

@@ -38,6 +38,7 @@
         }
 
         <a asp-controller="Exam" asp-action="EditExam" asp-route-id="@Model.Id" class="btn btn-primary">Edit Details</a>
+        <a asp-controller="Exam" asp-action="ExamPreview" asp-route-id="@Model.Id" class="btn btn-primary">Preview Exam</a>
         <form asp-action="TogglePublish" asp-controller="Exam" asp-route-id="@Model.Id" method="post" class="d-inline">
             <button type="submit" class="btn @(Model.IsPublished ? "btn-warning" : "btn-success")">
                 @(Model.IsPublished ? "Unpublish" : "Publish")

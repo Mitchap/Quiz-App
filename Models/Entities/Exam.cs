@@ -9,6 +9,7 @@
         public bool IsPublished { get; set; } = false;
         public int TotalScore { get; set; }
         public DateTime? PublishDateTime { get; set; }
+        public string Status { get; set; } = "Pending";
 
         //1:N relationship with Questions
         public ICollection<Question> Questions { get; set; } = new List<Question>();

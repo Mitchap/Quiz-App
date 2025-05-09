@@ -44,6 +44,12 @@
             </button>
         </form>
 
+        <form asp-action="MarkAsDone" asp-controller="Exam" asp-route-id="@Model.Id" method="post" class="d-inline">
+            <button type="submit" class="btn btn-secondary" @(Model.Status == "Done" ? "disabled" : "")>
+                <i class="fa-solid fa-check"></i> Mark as Done
+            </button>
+        </form>
+
  </section>
 
     <section class="mt-5">

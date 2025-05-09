@@ -119,6 +119,7 @@ namespace Quiz_App.Controllers
             var exam = await dbContext.Exams.FindAsync(id);
             if (exam == null) return NotFound();
 
+            exam.Status = exam.Status == "Ongoing" ? "Pending" : "Ongoing";
             exam.IsPublished = !exam.IsPublished;
 
             if (exam.IsPublished)
@@ -213,6 +214,21 @@ namespace Quiz_App.Controllers
             }
             
             return RedirectToAction("ExamDetails", new { id = examId });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> MarkAsDone(Guid id)
+        {
+            var exam = await dbContext.Exams.FindAsync(id);
+            if (exam == null)
+            {
+                return NotFound();
+            }
+
+            exam.Status = "Done";
+            await dbContext.SaveChangesAsync();
+
+            return RedirectToAction("ExamDetails", new { id });
         }
     }
 }

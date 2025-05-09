@@ -41,8 +41,10 @@
                     <th>Quiz</th>
                     <th>Duration</th>
                     <th>Total Score</th>
-                    <th>Status</th>
+                    <th>Status?</th>
                     <th>Action</th>
+                    <th>Status</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -59,6 +61,14 @@
                         </td>
                         <td>
                             <a asp-controller="Exam" asp-action="ExamDetails" asp-route-id="@item.Id" class="btn btn-primary">View</a>
+                        </td>
+                        <td>
+                            <span class="fw-bold
+                                @(item.Status == "Ongoing" ? "text-success" :
+                                  item.Status == "Done" ? "text-secondary" :
+                                  "text-warning")">
+                                @item.Status
+                            </span>
                         </td>
                     </tr>
                 }

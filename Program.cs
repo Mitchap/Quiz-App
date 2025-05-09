@@ -25,6 +25,12 @@ namespace Quiz_App
 
             builder.Services.AddControllersWithViews();
 
+            // auto exam publishing service
+            builder.Services.AddHostedService<ExamPublisherService>();
+
+            // smtp service
+            builder.Services.AddTransient<EmailService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -42,6 +42,12 @@ else
                         <div class="col-auto">
                             <input type="number" name="Duration" class="form-control" required style="width: 75px; min=" 1" max="240" asp-for="Duration" />
                         </div>
+                            <div class="form-group">
+                                <label asp-for="PublishDateTime" class="control-label">Publish Date & Time</label>
+                                <input asp-for="PublishDateTime" class="form-control" type="datetime-local"
+                                       value="@(Model.PublishDateTime?.ToString("yyyy-MM-ddTHH:mm"))" />
+                                <span asp-validation-for="PublishDateTime" class="text-danger"></span>
+                            </div>
                     </div>
                 </div>
 

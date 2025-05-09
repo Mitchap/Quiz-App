@@ -87,6 +87,44 @@ namespace Quiz_App.Controllers
             return View(exam);
         }
 
+        public async Task<IActionResult> DuplicateExam(Guid id)
+        {
+            var toCopy = await dbContext.Exams
+                .Include(e => e.Questions)
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            if (toCopy == null)
+            {
+                return NotFound();
+            }
+
+            var copy = new Exam
+            {
+                Id = Guid.NewGuid(), 
+                Title = toCopy.Title + " (Copy)", 
+                Duration = toCopy.Duration,
+                Randomize = toCopy.Randomize,
+                IsPublished = toCopy.IsPublished,
+                TotalScore = toCopy.TotalScore,
+                Questions = toCopy.Questions.Select(q => new Question
+                {
+                    Id = Guid.NewGuid(), 
+                    ExamId = toCopy.Id, 
+                    QuestionTitle = q.QuestionTitle,
+                    Choice_1 = q.Choice_1,
+                    Choice_2 = q.Choice_2,
+                    Choice_3 = q.Choice_3,
+                    Choice_4 = q.Choice_4,
+                    CorrectAnswer = q.CorrectAnswer,
+                    Score = q.Score
+                }).ToList()
+            };
+
+            dbContext.Exams.Add(copy);
+            await dbContext.SaveChangesAsync();
+            return RedirectToAction("ListExam");
+        }
+
         //Edit exams
         [HttpGet]
 
@@ -169,6 +207,15 @@ namespace Quiz_App.Controllers
             await dbContext.SaveChangesAsync();
 
             return RedirectToAction("ListExam");
+        }
+
+        public async Task<IActionResult> ExamPreview(Guid id)
+        {
+            var exam = await dbContext.Exams
+                .Include(e => e.Questions)
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            return View("ExamPreview",exam);
         }
 
         [HttpPost]

@@ -1,0 +1,29 @@
+﻿@{
+}
+
+@model Quiz_App.Models.Entities.Exam
+
+<h1>The Quiz</h1>
+<div>
+    <div class="d-flex flex-column">
+        <h2>Preview for @Model.Title</h2>
+        <p><strong>Duration:</strong> @Model.Duration minutes</p>
+
+            @for (int i = 0; i < Model.Questions.Count; i++)
+            {
+                var question = Model.Questions.ElementAt(i);
+                <div class="question-block mb-4 border-2">
+                    <h5>Question @(i + 1): @question.QuestionTitle</h5>
+                    <div>
+                    <input type="radio" name="Answers[@i]" value="Choice_1" disabled/> @question.Choice_1 <br />
+                    <input type="radio" name="Answers[@i]" value="Choice_2" disabled/> @question.Choice_2 <br />
+                    <input type="radio" name="Answers[@i]" value="Choice_3" disabled/> @question.Choice_3 <br />
+                    <input type="radio" name="Answers[@i]" value="Choice_4" disabled/> @question.Choice_4 <br />
+                    </div>
+                </div>
+            }
+            <div>
+                <button type="submit" class="btn btn-primary " disabled>Submit Quiz</button>
+            </div>     
+    </div>
+</div>

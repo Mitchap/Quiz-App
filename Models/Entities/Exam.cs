@@ -10,6 +10,8 @@
         public int TotalScore { get; set; }
         public DateTime? PublishDateTime { get; set; }
 
+        public string EmailMessage { get; set; }
+
         //1:N relationship with Questions
         public ICollection<Question> Questions { get; set; } = new List<Question>();
 

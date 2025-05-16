@@ -46,7 +46,8 @@ namespace Quiz_App.Controllers
                 Title = viewModel.Title,
                 Duration = viewModel.Duration,
                 Randomize = viewModel.Randomize,
-                PublishDateTime = viewModel.PublishDateTime
+                PublishDateTime = viewModel.PublishDateTime,
+                EmailMessage = $"You've been invited to take the Quiz {viewModel.Title}"
             };
             
             await dbContext.Exams.AddAsync(exam);
@@ -170,7 +171,7 @@ namespace Quiz_App.Controllers
                     string email = quizTaker.Email;
                     string subject = $"You have been invited to take the quiz '{exam.Title}'";
                     string quizLink = $"{_baseUrl}/TakeQuiz?examId={exam.Id}";
-                    string body = $"Hello, you have been invited to take the quiz '{exam.Title}'.<br><br>" +
+                    string body = $"{exam.EmailMessage}<br><br>" +
                                   $"Use the following link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
                                   $"Your PIN: {quizTaker.Pin}";
 
@@ -245,7 +246,7 @@ namespace Quiz_App.Controllers
                 {
                     var subject = $"Access to Quiz: {exam.Title}";
                     var quizLink = $"{_baseUrl}/TakeQuiz?examId={examId}";
-                    var body = $"You have been invited to take the quiz '{exam.Title}'.<br><br>" +
+                    var body = $"{exam.EmailMessage}<br><br>" +
                                $"Use this link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
                                $"Your PIN: {pin}";
 
@@ -260,6 +261,22 @@ namespace Quiz_App.Controllers
             }
             
             return RedirectToAction("ExamDetails", new { id = examId });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateEmailMessage(Guid id, string emailMessage)
+        {
+            var exam = await dbContext.Exams.FindAsync(id);
+            if (exam == null)
+            {
+                return NotFound();
+            }
+
+            exam.EmailMessage = emailMessage;
+            await dbContext.SaveChangesAsync();
+
+            TempData["Success"] = "Email message updated successfully.";
+            return RedirectToAction("ExamDetails", new { id });
         }
     }
 }

@@ -47,7 +47,7 @@ namespace Quiz_App.Controllers
                 Duration = viewModel.Duration,
                 Randomize = viewModel.Randomize,
                 PublishDateTime = viewModel.PublishDateTime,
-                EmailMessage = $"You've been invited to take the Quiz {viewModel.Title}"
+                EmailMessage = $"Access to: {viewModel.Title}~You've been invited to take the Quiz {viewModel.Title}"
             };
             
             await dbContext.Exams.AddAsync(exam);
@@ -160,6 +160,10 @@ namespace Quiz_App.Controllers
 
             exam.IsPublished = !exam.IsPublished;
 
+            var divider = exam.EmailMessage.IndexOf('~');
+            var TempEmailSubject = exam.EmailMessage.Substring(0, divider);
+            var TempEmailbody = exam.EmailMessage.Substring(divider + 1);
+
             if (exam.IsPublished)
             {
                 var quizTakers = await dbContext.QuizTakers
@@ -168,10 +172,11 @@ namespace Quiz_App.Controllers
             
                 foreach(var quizTaker in quizTakers)
                 {
+                    
                     string email = quizTaker.Email;
-                    string subject = $"You have been invited to take the quiz '{exam.Title}'";
+                    string subject = $"{TempEmailSubject}";
                     string quizLink = $"{_baseUrl}/TakeQuiz?examId={exam.Id}";
-                    string body = $"{exam.EmailMessage}<br><br>" +
+                    string body = $"{TempEmailbody}<br><br>" +
                                   $"Use the following link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
                                   $"Your PIN: {quizTaker.Pin}";
 
@@ -244,9 +249,14 @@ namespace Quiz_App.Controllers
             {
                 try
                 {
-                    var subject = $"Access to Quiz: {exam.Title}";
+                    var divider = exam.EmailMessage.IndexOf('~');
+                    var TempEmailSubject = exam.EmailMessage.Substring(0, divider);
+                    var TempEmailbody = exam.EmailMessage.Substring(divider + 1);
+
+
+                    var subject = $"{TempEmailSubject}";
                     var quizLink = $"{_baseUrl}/TakeQuiz?examId={examId}";
-                    var body = $"{exam.EmailMessage}<br><br>" +
+                    var body = $"{TempEmailbody}<br><br>" +
                                $"Use this link to access the quiz: <a href='{quizLink}'>Take Quiz</a><br>" +
                                $"Your PIN: {pin}";
 
@@ -264,15 +274,15 @@ namespace Quiz_App.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateEmailMessage(Guid id, string emailMessage)
+        public async Task<IActionResult> UpdateEmailMessage(Guid id, string emailMessage, string emailSubject)
         {
             var exam = await dbContext.Exams.FindAsync(id);
             if (exam == null)
             {
                 return NotFound();
             }
-
-            exam.EmailMessage = emailMessage;
+            var temp = emailSubject + '~' + emailMessage;
+            exam.EmailMessage = temp;
             await dbContext.SaveChangesAsync();
 
             TempData["Success"] = "Email message updated successfully.";

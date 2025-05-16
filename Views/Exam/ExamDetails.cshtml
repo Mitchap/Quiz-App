@@ -2,6 +2,9 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    var divider = Model.EmailMessage.IndexOf('~');
+    var TempEmailSubject = Model.EmailMessage.Substring(0,divider);
+    var TempEmailbody = Model.EmailMessage.Substring(divider+1);
 }
 
 @model Quiz_App.Models.Entities.Exam
@@ -164,9 +167,12 @@
                     <h5 class="modal-title" id="emailMessageModalLabel">Edit Email Message</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body d-flex flex-column gap-3">
                     <input type="hidden" name="Id" value="@Model.Id" />
-                    <textarea name="EmailMessage" class="form-control" rows="8" required>@Model.EmailMessage</textarea>
+                    <h2>Subject</h2>
+                    <textarea name="EmailSubject" class="form-control" rows="2  " required>@TempEmailSubject</textarea>
+                    <h2>Body</h2>
+                    <textarea name="EmailMessage" class="form-control" rows="8" required>@TempEmailbody</textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
